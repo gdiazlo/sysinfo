@@ -1,0 +1,5 @@
+(library
+ (name es)
+ (libraries unix ctypes.foreign)
+  (flags     :standard -cclib -lEndpointSecurity -cclib -lbsm))
+

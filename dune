@@ -1,0 +1,3 @@
+(executable
+ (name sysinfo)
+ (libraries sysinfo sysinfo_macos))

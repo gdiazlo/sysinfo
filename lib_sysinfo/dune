@@ -1,0 +1,4 @@
+(library
+ (name sysinfo)
+ (libraries yojson))
+ 
