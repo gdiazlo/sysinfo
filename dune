@@ -1,4 +1,11 @@
 (executable
  (name sysinfo)
- (enabled_if (= %{system} "macosx"))
+ (enabled_if
+  (= %{system} "macosx"))
  (libraries sysinfo sysinfo_macos))
+
+(executable
+ (name sysinfo)
+ (enabled_if
+  (= %{system} "linux"))
+ (libraries sysinfo sysinfo_linux))

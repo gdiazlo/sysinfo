@@ -1,3 +1,3 @@
 module Es : sig
-    val create : unit -> int
+  val create : unit -> int
 end
