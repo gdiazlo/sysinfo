@@ -1,0 +1,7 @@
+(test
+ (name packages_test)
+ (package sysinfo_macos)
+ (build_if
+  (= %{system} "macosx"))
+ (modules packages_test)
+ (libraries sysinfo_macos alcotest c_plist_xml))

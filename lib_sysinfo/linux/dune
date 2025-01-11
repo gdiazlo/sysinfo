@@ -1,0 +1,9 @@
+(library
+ (name sysinfo_linux)
+ (public_name sysinfo.linux)
+ (enabled_if
+  (= %{system} "linux"))
+ (libraries sysinfo unix yojson ppx_deriving_yojson.runtime)
+ (implements sysinfo)
+ (preprocess
+  (pps ppx_deriving_yojson)))

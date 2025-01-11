@@ -1,3 +1,4 @@
 (library
- (name sysinfo)
+ (public_name sysinfo)
+ (virtual_modules processes packages services)
  (libraries yojson))
