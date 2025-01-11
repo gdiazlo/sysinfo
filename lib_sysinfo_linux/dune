@@ -1,7 +1,0 @@
-(library
- (name sysinfo_linux)
- (enabled_if
-  (= %{system} "linux"))
- (libraries sysinfo obus ctypes ctypes.foreign unix)
- ; (library_flags :standard -linkall)
- )
