@@ -1,5 +1,5 @@
 (library
  (name es)
+ (enabled_if (= %{system} "macosx"))
  (libraries unix ctypes.foreign)
   (flags     :standard -cclib -lEndpointSecurity -cclib -lbsm))
-

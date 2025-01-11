@@ -1,6 +1,7 @@
 (rule
+(enabled_if (= %{system} "macosx"))
  (deps (source_tree c_lib))
- (targets libPlistToXMLConverter.a dllPlistToXMLConverter.so ) 
+ (targets libPlistToXMLConverter.a dllPlistToXMLConverter.so )
  (action
  (no-infer
   (progn
@@ -12,6 +13,7 @@
 
 (library
  (name c_plist_xml)
+ (enabled_if (= %{system} "macosx"))
  (libraries ctypes ctypes.foreign)
  (foreign_archives PlistToXMLConverter)
  (c_library_flags -framework Foundation)
