@@ -3,9 +3,7 @@ open Sysinfo
 let run_cmd cmd =
   match cmd with
   | "packages" ->
-    let pl = Packages.get () in
-    let _ = Printf.printf "Packages: %d\n" (List.length pl) in
-    pl
+    Packages.get ()
     |> List.filter_map Result.to_option
     |> List.iter (fun r ->
       r |> Packages.to_yojson |> Yojson.Safe.pretty_to_string |> print_endline)

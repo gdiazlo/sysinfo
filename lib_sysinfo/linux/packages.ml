@@ -30,8 +30,7 @@ let get_dpkg_packages () =
       let pkg = of_yojson (Yojson.Safe.from_string line) in
       (match pkg with
        | Ok pkg -> loop (Ok pkg :: acc)
-       | Error msg ->
-         loop (Error msg :: acc))
+       | Error msg -> loop (Error msg :: acc))
   in
   let result = loop [] in
   let _ = Unix.close_process_in ic in
@@ -50,8 +49,7 @@ let get_rpm_packages () =
       let pkg = of_yojson (Yojson.Safe.from_string line) in
       (match pkg with
        | Ok pkg -> loop (Ok pkg :: acc)
-       | Error msg ->
-         loop (Error msg :: acc))
+       | Error msg -> loop (Error msg :: acc))
   in
   let result = loop [] in
   let _ = Unix.close_process_in ic in
