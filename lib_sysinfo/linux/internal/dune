@@ -1,0 +1,17 @@
+(library
+ (name internal_linux)
+ (public_name sysinfo.linux.internal)
+ (enabled_if
+  (= %{system} "linux"))
+ (libraries
+  unix
+  yojson
+  ppx_deriving_yojson.runtime
+  ctypes
+  ctypes.foreign
+  posix-base
+  posix-types)
+ (inline_tests)
+ (flags :standard -cclib)
+ (preprocess
+  (pps ppx_deriving_yojson ppx_inline_test ppx_expect)))

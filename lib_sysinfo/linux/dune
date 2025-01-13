@@ -3,7 +3,9 @@
  (public_name sysinfo.linux)
  (enabled_if
   (= %{system} "linux"))
- (libraries sysinfo unix yojson ppx_deriving_yojson.runtime)
+ (libraries sysinfo unix yojson ppx_deriving_yojson.runtime internal_linux)
  (implements sysinfo)
+ (inline_tests)
+ (flags :standard -cclib)
  (preprocess
-  (pps ppx_deriving_yojson)))
+  (pps ppx_deriving_yojson ppx_inline_test ppx_expect)))

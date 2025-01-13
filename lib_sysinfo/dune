@@ -1,4 +1,4 @@
 (library
  (public_name sysinfo)
- (virtual_modules processes packages services)
+ (virtual_modules processes packages services users os)
  (libraries yojson))
