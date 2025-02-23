@@ -14,4 +14,4 @@
  (inline_tests)
  (flags :standard -cclib)
  (preprocess
-  (pps ppx_deriving_yojson ppx_inline_test ppx_expect)))
+  (pps ppx_deriving_yojson ppx_expect)))
