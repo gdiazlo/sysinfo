@@ -1,0 +1,10 @@
+(library
+ (name sysinfo_windows)
+ (public_name sysinfo.windows)
+ (enabled_if
+  (= %{system} "mingw64"))
+ (libraries sysinfo yojson ppx_deriving_yojson.runtime internal_windows)
+ (implements sysinfo)
+ (inline_tests)
+ (preprocess
+  (pps ppx_deriving_yojson ppx_expect)))

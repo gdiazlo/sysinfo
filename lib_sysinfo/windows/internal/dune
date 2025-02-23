@@ -1,0 +1,10 @@
+(library
+ (name internal_windows)
+ (public_name sysinfo.windows.internal)
+ (enabled_if
+  (= %{system} "mingw64"))
+ (libraries yojson ppx_deriving_yojson.runtime ctypes ctypes.foreign)
+ (inline_tests)
+ (c_library_flags (-ladvapi32))
+ (preprocess
+  (pps ppx_deriving_yojson ppx_expect)))
