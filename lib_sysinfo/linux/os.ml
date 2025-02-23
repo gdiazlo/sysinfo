@@ -51,7 +51,7 @@ let get_os_release () =
 ;;
 
 let%expect_test "get" =
-  let os = get () in
+  let os = get_os_release () in
   let pp_os fmt os =
     match os with
     | Error e -> Format.fprintf fmt "Error: %s\n" e
